@@ -8,6 +8,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import ViewIngredientsButton from "../../components/ViewIngredientsButton/ViewIngredientsButton";
 import Calendar from '../Calender/Calender'
 import { Icon } from 'react-native-elements';
+import Localisation from '../Localisation'
 
 
 const { width: viewportWidth } = Dimensions.get("window");
@@ -108,6 +109,9 @@ export default function RecipeScreen(props) {
              />
           <Text style={styles.userCard}>4 years</Text>
         </View>
+        <view>
+          <Localisation/>
+        </view>
       </View>
 
     </ScrollView>
