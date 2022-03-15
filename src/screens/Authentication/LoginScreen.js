@@ -197,7 +197,7 @@ export default function LoginScreen3({ navigation }) {
       setInputs(prevState => ({ ...prevState, [input]: text }))
     }
 
-    const IP = "http://192.168.250.221:3000"
+    const IP = "http://192.168.250.37:3000"
     var pressSignup = () => {
       axios.post(`${IP}/user/usersignup`, { userName: inputs.userName, email: inputs.email, password: inputs.password, phoneNumber: inputs.phoneNumber })
         .then(result => {

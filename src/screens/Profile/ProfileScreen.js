@@ -27,7 +27,7 @@ function Photos({ photos }) {
         var hello = JSON.parse(result)
         console.log(hello);
         console.log(hello.data.user.id_user)
-        const IP = "http://192.168.250.221:3000"
+        const IP = "http://192.168.250.37:3000"
         axios.get(`${IP}/user/profileUser/${hello.data.user.id_user}`).then(({ data }) => {
           console.log('data hamla', data)
           setdata(data[0])
@@ -120,7 +120,7 @@ export default function ProfileScreen1() {
         var hello = JSON.parse(result)
         console.log(hello);
         console.log(hello.data.user.id_user)
-        const IP = "http://192.168.250.221:3000"
+        const IP = "http://192.168.250.37:3000"
         axios.get(`${IP}/user/profileUser/${hello.data.user.id_user}`).then(({ data }) => {
           console.log('data hamla', data)
           setdata(data[0])
