@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import zina from './styles'
 import axios from 'axios';
-import { ActivityIndicator, AsyncStorage } from 'react-native';
+import { ActivityIndicator,  AsyncStorage } from 'react-native';
 import {
   StyleSheet,
   Text,
   View,
+  Image,
   StatusBar,
   TextInput,
   TouchableOpacity,
@@ -100,6 +101,7 @@ export default function LoginScreen3({ navigation }) {
     
     return (
       <View style={styles.container}>
+        <Image source={{uri: 'https://media.discordapp.net/attachments/935973910695002123/953355010568257667/logo.png?width=960&height=443'}}/>
         <View style={styles.bigCircle}></View>
         <View style={styles.smallCircle}></View>
         <View style={styles.centerizedView}>

@@ -26,8 +26,10 @@ function MainNavigator() {
     <Stack.Navigator
       screenOptions={{
         headerTitleStyle: {
+          margin: 10,
           fontWeight: 'bold',
           textAlign: 'center',
+          marginLeft: '35%',
           alignSelf: 'center',
           flex: 1,
           color: '#fff'
@@ -40,12 +42,11 @@ function MainNavigator() {
       
     >
       {/* <Stack.Screen name='Login' component={LoginScreen} options={{headerShown:false}}  />
-      <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}  /> */}
-      
+      <Stack.Screen name='Signup' component={Signup} options={{headerShown:false}}  />   */}
       <Stack.Screen name='Home' component={HomeScreen} />
       <Stack.Screen name='Localisation' component={Localisation} />
       <Stack.Screen name='Location' component={LocationScreen} />
-      <Stack.Screen name='Categories' component={CategoriesScreen} />
+      <Stack.Screen name='Doctors' component={CategoriesScreen} />
       <Stack.Screen name='Doctor profile' component={RecipeScreen} />
       <Stack.Screen name='Appointement' component={Appointement} />
       <Stack.Screen name='Search' component={SearchScreen} />

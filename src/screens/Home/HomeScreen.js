@@ -3,7 +3,6 @@ import { ScrollView, FlatList, Text, View, Image, TouchableHighlight } from "rea
 import styles from "./styles";
 import { categories } from "../../data/dataArrays";
 import MenuImage from "../../components/MenuImage/MenuImage";
-import Blogs from '../Blogs/Blogs'
 import axios from 'axios'
 
 export default function CategoriesScreen(props) {
@@ -22,6 +21,8 @@ export default function CategoriesScreen(props) {
     navigation.setOptions({
       headerTitleStyle: {
         fontWeight: "bold",
+        margin: 10,
+        marginLeft: 100,
         textAlign: "center",
         alignSelf: "center",
         color: 'white',
@@ -39,7 +40,7 @@ export default function CategoriesScreen(props) {
   }, []);
 
   const onPressCategory = () => {
-    navigation.navigate("Location");
+    navigation.navigate("Doctors");
   };
 
   const onPressBlogs = () => {
@@ -50,27 +51,36 @@ export default function CategoriesScreen(props) {
     <TouchableHighlight underlayColor="#fff" onPress={()=> onPressBlogs()}>
         <View style={styles.categoriesItemContainer}>
           <Image style={styles.categoriesPhoto} source={{uri: item.img }} />
-          <Text style={styles.categoriesName}></Text>
-          <Text style={styles.categoriesInfo}>{item.title}</Text>
-          {/* <Text>By doctor Mortadha</Text> */}
+          
+          <Text style={styles.categoriesName}>{item.texte}</Text>
         </View>
       </TouchableHighlight>
   );
 
   const renderCategory = ({ item }) => (
-    <TouchableHighlight underlayColor="#fff" onPress={() => onPressCategory(item)}>
-      <View style={styles.container}>
-        <Image style={styles.photo} source={{ uri: item.photo_url }} />
-        <Text style={styles.title}>{item.name}</Text>
-      </View>
-    </TouchableHighlight>
+    <View style={{backgroundColor: '#fff'}}>
+      <TouchableHighlight underlayColor="#fff" onPress={() => onPressCategory(item)}>
+        <View style={styles.container}>
+          <Image style={styles.photo} source={{ uri: item.photo_url }} />
+          <Text style={styles.title}>{item.name}</Text>
+        </View>
+      </TouchableHighlight>
+    </View>
   );
 
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: '#fff'}}>
       <View>
+      <TouchableHighlight underlayColor="#fff" >
+        <View style={styles.categoriesItemContainerLogo}>
+          <Image style={styles.categoriesPhotoLogo} source={{uri: 'https://media.discordapp.net/attachments/935973910695002123/953363371456077914/logore.png?width=960&height=273'}}/>
+        </View>
+      </TouchableHighlight>
+      <View >
         <Text style={styles.TitleText}>   Speciality</Text>
         <FlatList horizontal showsVerticalScrollIndicator={false} data={categories} renderItem={renderCategory} keyExtractor={(item) => `${item.id}`} />
+      </View>
+        <Text></Text>
         <Text style={styles.TitleText}>   Blogs</Text>
         <FlatList vertical showsVerticalScrollIndicator={false} numColumns={1} data={blogs} renderItem={renderBlogs} keyExtractor={(item) => `${item.id_blog}`} />
       </View>

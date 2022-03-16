@@ -183,7 +183,7 @@ export default function ProfileScreen1() {
                   }}
                   onPress={() => setShowContent('Photos')}
                 >
-                  <Text style={styles.showContentButtonText}>INFOS</Text>
+                  <Text style={styles.showContentButtonText}>Informations</Text>
                 </TouchableOpacity>
               </View>
               {showContent === 'Photos' ? (

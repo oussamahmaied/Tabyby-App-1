@@ -51,6 +51,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  infoContainerr: {
+    flex: 1,
+    marginLeft:40,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   buttonContainer: {
     flex: 1,
     flexDirection: 'row',

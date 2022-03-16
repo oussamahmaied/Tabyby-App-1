@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Tbyby",
+    "name": "Tabyby",
    
     "privacy": "public",
     "platforms": [
@@ -10,9 +10,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/preview-xl.jpg",
+    "icon": "./assets/iconlogo.png",
     "splash": {
-      "image": "./assets/preview-xl.jpg",
+      "image": "./assets/iconlogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

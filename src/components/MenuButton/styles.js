@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { color } from 'react-native-reanimated';
 
 const styles = StyleSheet.create({
   btnClickContain: {
@@ -20,7 +21,8 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 16,
     marginLeft: 10,
-    marginTop: 2
+    marginTop: 2,
+    color: '#26619c'
   }
 });
 

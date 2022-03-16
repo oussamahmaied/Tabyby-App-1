@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingVertical: 14,
       paddingHorizontal: 40,
-      backgroundColor: '#FF0000',
+      backgroundColor: 'red',
       borderRadius: 1000,
       elevation: 6,
       shadowColor: '#000',
